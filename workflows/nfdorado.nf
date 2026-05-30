@@ -19,6 +19,7 @@ params.base_model = 'sup@latest'
 params.modified_base_models = '5mC_5hmC@latest,6mA@latest'
 params.models_dir = '/data1/shahs3/users/schrait/dorado/models' // TODO fix this
 params.convert_fast5 = true
+params.dorado_args = ''
 
 println "Running with the following parameters:"
 println "Model Quality: ${params.base_model}"
