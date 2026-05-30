@@ -116,7 +116,7 @@ process dorado_basecalling {
 
     script:
     """
-    dorado basecaller --models-directory ${models_dir} ${base_model},${modified_base_models} ./ --device cuda:all --recursive --verbose -o ./
+    dorado basecaller --models-directory ${models_dir} ${base_model},${modified_base_models} ./ --device cuda:all --recursive --verbose ${params.dorado_args} -o ./
 
     n_bams=\$(ls *.bam | wc -l)
     if [ "\$n_bams" -ne 1 ]; then
